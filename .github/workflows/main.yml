@@ -26,3 +26,8 @@ jobs:
           brew tap sitecore/content-hub
           brew install ch-cli
           ch-cli --version
+
+      - name: CLI PoC
+          ch-cli endpoint add --name test2 --url https://base-dam-asof20230330.sitecoresandbox.cloud --client-id 
+CLI2 --client-secret 123
+          
