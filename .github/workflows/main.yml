@@ -21,14 +21,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Install and run Sitecore CLI
+     - name: Install Content Hub CLI
         run: |
-          cd ../../..
-          dotnet new tool-manifest
-          dotnet nuget add source -n Sitecore https://sitecore.myget.org/F/sc-packages/api/v3/index.json
-          dotnet tool install Sitecore.CLI
-
-      - name: Sitecore CLI Show Version
-        run: |
-          dotnet sitecore init
+          brew tap sitecore/content-hub
+          brew install ch-cli
           ch-cli --version
