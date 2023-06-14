@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RazorLight">
+      <HintPath>lib/RazorLight.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Stylelabs.M.Print">
+      <HintPath>lib/Stylelabs.M.Print.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

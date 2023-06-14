@@ -1,0 +1,70 @@
+{
+  "template": {
+    "output": "OutputName",
+    "file": "template.cshtml",
+    "source": {
+      "type": "entity",
+      "variables": [
+        {
+          "name": "Preview",
+          "type": "rendition",
+          "lowRes": {
+            "property": "Renditions",
+            "rendition": "preview"
+          },
+          "highRes": {
+            "property": "MainFile"
+          },
+          "relation": {
+            "name": "PCMProductToAsset",
+            "role": "Parent",
+            "relation": {
+              "name": "MasterFile",
+              "role": "Parent"
+            }
+          }
+        },
+        {
+          "name": "ProductName",
+          "type": "property",
+          "property": "ProductName"
+        },
+        {
+          "name": "ProductShortDescription",
+          "type": "property",
+          "property": "ProductShortDescription"
+        },
+        {
+          "name": "Impact1",
+          "type": "property",
+          "property": "Impact1"
+        },
+        {
+          "name": "Impact1Detail",
+          "type": "property",
+          "property": "Impact1Detail"
+        },
+        {
+          "name": "Impact2",
+          "type": "property",
+          "property": "Impact2"
+        },
+        {
+          "name": "Impact2Detail",
+          "type": "property",
+          "property": "Impact2Detail"
+        },
+        {
+          "name": "Impact3",
+          "type": "property",
+          "property": "Impact3"
+        },
+        {
+          "name": "Impact3Detail",
+          "type": "property",
+          "property": "Impact3Detail"
+        }
+      ]
+    }
+  }
+}

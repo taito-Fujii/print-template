@@ -1,0 +1,82 @@
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* typo */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10pt;
+  color: black;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.container {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.description {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  height: 300px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-left: 2px solid red;
+}
+.description .p {
+  color: gray;
+}
+
+.column {
+  width: 33.33%;
+  height: 50%;
+  float: left;
+  box-sizing: border-box;
+  background-color: #478ac9;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+.column h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.column p {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* footerを下に固定したい */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  color: black;
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+}

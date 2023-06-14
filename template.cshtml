@@ -1,0 +1,56 @@
+@using System.Linq
+@model Stylelabs.M.Print.EntityGeneration.Models.Model
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="template.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script type='module' src='https://feaasstatic.blob.core.windows.net/packages/clientside/latest/browser/index.esm.js'></script>
+    <link rel="preload" as="fetch" href="https://feaas.blob.core.windows.net/components/7HF6kKrspr4UqDi4otAkGS/TnaaxO-NZG/responsive/published.html" />
+    <link rel="preload" as="style" href="https://feaas.blob.core.windows.net/styles/7HF6kKrspr4UqDi4otAkGS/published.css" />
+
+    <title>Entity Print Template</title>
+    <style>
+      .theme-image {
+        width: 100%;
+        height: 50%;
+        background-image:  url('@(@Model.Properties["$$Preview$$"].FirstOrDefault())');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="theme-image">
+        <div class="description">
+          <h1>@Raw(@Model.Properties["$$ProductName$$"].FirstOrDefault())</h1>
+          <p>@Raw(@Model.Properties["$$ProductShortDescription$$"].FirstOrDefault())</p>
+        </div>
+      </div>
+      <div class="column">
+        <h2>@Raw(@Model.Properties["$$Impact1$$"].FirstOrDefault())</h2>
+        <p>@Raw(@Model.Properties["$$Impact1Detail$$"].FirstOrDefault())</p>
+      </div>
+      <div class="column">
+        <h2>@Raw(@Model.Properties["$$Impact2$$"].FirstOrDefault())</h2>
+        <p>@Raw(@Model.Properties["$$Impact2Detail$$"].FirstOrDefault())</p>
+      </div>
+      <div class="column">
+        <h2>@Raw(@Model.Properties["$$Impact3$$"].FirstOrDefault())</h2>
+        <p>@Raw(@Model.Properties["$$Impact3Detail$$"].FirstOrDefault())</p>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023</p>
+    </footer>
+  </body>
+  </html>
+  <!-- 
+   M.PCM.Product
+   xmc pirnt demo
+  -->
